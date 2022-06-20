@@ -40,7 +40,7 @@ const loginController = async (req, res) => {
     }
 };
 
-const createTalker = async (req, res) => {
+const createTalker = (req, res) => {
     try {
         talkerValidate(req.body);
         const insert = { ...req.body, id: readFile('talker').length + 1 };
